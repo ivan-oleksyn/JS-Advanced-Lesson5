@@ -1,0 +1,53 @@
+<h1 class="title">Angular users task</h1>
+<div class="container">
+  <div class="block-wrapper">
+    <div class="left-block">
+      <form class="form">
+        <div class="login-wrapper">
+          <h3>Login</h3>
+          <input type="text" class="input login" placeholder="Enter login" (input)="checkLogin()"
+            [(ngModel)]="loginValue" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="password-wrapper">
+          <h3>Password</h3>
+          <input type="password" class="input password" placeholder="Enter password" (input)="checkPassword()"
+            [(ngModel)]="passwordValue" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="email-wrapper">
+          <h3>Email address</h3>
+          <input type="text" class="input email" placeholder="Enter email" (input)="checkEmail()"
+            [(ngModel)]="emailValue" [ngModelOptions]="{standalone: true}">
+        </div>
+        <input type="button" *ngIf="addActive" class="btn add-btn-form" value="Add user" (click)="addUser()"
+          [disabled]="addEnabled">
+        <input type="button" *ngIf="!addActive" class="btn edit-btn-form" value="Save edit user"
+          (click)="saveEditedUser()">
+      </form>
+    </div>
+    <div class=" right-block">
+      <table id="table">
+        <thead class="head">
+          <tr class="thead">
+            <th class="index">#</th>
+            <th class="user-login">Login</th>
+            <th class="user-password">Password</th>
+            <th class="user-email">Email</th>
+            <th class="user-edit">Edit</th>
+            <th class="user-delete">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr class="border" *ngFor="let user of users; index as userId">
+            <td class="index">{{ userId + 1 }}</td>
+            <td class="user-login"> {{ user.login }} </td>
+            <td class="user-password">{{ user.password }}</td>
+            <td class="user-email"> {{ user.email }} </td>
+            <td class="user-edit"> <input type="button" value="Edit" class="btn-edit" (click)=" editUser(userId)"></td>
+            <td class="user-delete"> <input type="button" value="Delete" class="btn-delete" (click)="deleteUser(userId)"
+                [disabled]="editActive"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

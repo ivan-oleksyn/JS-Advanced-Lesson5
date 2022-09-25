@@ -1,0 +1,23 @@
+<div class="container mt-3">
+  <ul class="nav nav-tabs position-relative" id="myTab" role="tablist">
+    <span class="m-2">Last works > > ></span>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link nav-item-btn" id="cenzor-tab" data-bs-toggle="tab" data-bs-target="#cenzor" type="button" role="tab"
+        aria-controls="home" aria-selected="true" [routerLink]="[ 'cenzor' ]" routerLinkActive="active">Cenzor</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="user-list-tab" data-bs-toggle="tab" data-bs-target="#user-list" type="button" role="tab"
+        aria-controls="profile" aria-selected="false" [routerLink]="[ 'userlist' ]"
+        routerLinkActive="active">Users</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="task-list-tab" data-bs-toggle="tab" data-bs-target="#task-list" type="button" role="tab"
+        aria-controls="contact" aria-selected="false" [routerLink]="[ 'tasklist' ]"
+        routerLinkActive="active">Tasks</button>
+    </li>
+    <span class="home mt-2 position-absolute" [routerLink]="[ '' ]" routerLinkActive="">Back to > > > Home</span>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="title">Plan your day!</h1>
+  <h3 class="subtitle">User: Ivan Oleksyn. Count of tasks 6</h3>
+  <form class="form">
+    <input type="text" class="task-name" [(ngModel)]="taskName" [ngModelOptions]="{standalone: true}">
+    <input type="button" value="Add" class="add-btn" (click)="addTask()">
+  </form>
+</div>
+<app-list-table [tasks]="tasks"></app-list-table>

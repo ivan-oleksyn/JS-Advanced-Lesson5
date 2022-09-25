@@ -1,0 +1,22 @@
+<header class="header">
+  <h2 class="title">Angular list of prohibited words</h2>
+</header>
+<section class="work-space">
+  <div class="container">
+    <div class="cenzor">
+      <div class="bad-words">Bad words: <p class="bad-word">
+          {{ getCenzorWords() }}
+        </p>
+      </div>
+      <form action="" class="get-words" name="getWords">
+        <input type="text" [placeholder]="placeholders" [class]="inputClasses" [(ngModel)]="inputValue"
+          [ngModelOptions]="{standalone: true}">
+        <input type="button" class="add-btn button" value="Add" (click)="addBadWords()">
+        <input type="button" class="reset-btn button" value="Reset" (click)="resetBadWordsList()">
+      </form>
+      <textarea cols="30" rows="10" [placeholder]="textareaPlaceholder" [class]="textareaClasses"
+        [(ngModel)]="textareaValue"></textarea>
+      <input type="button" value="Cenzor" [class]="cenzorClasses" (click)="checkBadWords()">
+    </div>
+  </div>
+</section>

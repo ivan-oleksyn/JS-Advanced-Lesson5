@@ -1,0 +1,33 @@
+<div class="container">
+  <table class="table">
+    <thead class="thead">
+      <tr class="head-row">
+        <th class="index">#</th>
+        <th class="task">Task</th>
+        <th class="check">Check</th>
+        <th class="status">Done/in prodress</th>
+        <th class="edit">edit</th>
+        <th class="delete">Delete</th>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr class="body-row" *ngFor="let task of tasks; index as taskIndex">
+        <td class="index">{{ taskIndex + 1 }}</td>
+        <td class="task-name">{{ task.name }}</td>
+        <td class="task-checkbox"><input type="checkbox" [checked]="task.status" (click)="changeStatus(taskIndex)">
+        </td>
+        <td class="task-status" [style.color]="task.status ? 'green' : 'red'">{{ task.status ? 'Done' : 'In progres' }}
+        </td>
+        <td class="task-edit"> <input type="button" value="Edit" class="btn-edit" (click)="editTask(taskIndex)"></td>
+        <td class="task-delete"> <input type="button" value="Delete" class="btn-delete"
+            [class.canDelete]="!task.status || canDelete(taskIndex)" [disabled]="!task.status || canDelete(taskIndex)"
+            (click)="deleteTask(taskIndex)"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="save-task-block" *ngIf='editActive'>
+    <input type="text" class="save-task" [(ngModel)]="taskName" [ngModelOptions]="{standalone: true}">
+    <input type="button" class="save-btn" value="save" (click)="saveTask()">
+  </div>
+</div>
+

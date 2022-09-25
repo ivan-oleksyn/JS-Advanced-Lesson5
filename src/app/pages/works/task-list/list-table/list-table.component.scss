@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+     font-family: Verdana,
+     Geneva,
+     Tahoma,
+     sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    .table{
+        width: 100%;
+        margin-top: 50px;
+        border-collapse: collapse;
+        .thead{
+            height: 50px;
+            border-top: 2px solid #cac9c9;
+            border-bottom: 2px solid #cac9c9;
+            font-size: 18px;
+            letter-spacing: 0.1rem;
+            .head-row{
+                .index{
+                    width: 5%;
+                }
+                .task{
+                    width: 28%;
+                }
+                .check{
+                    width: 15%;
+                }
+                .status{
+                    width: 25%;
+                }
+                .edit{
+                    width: 17%;
+                }
+                .delete{
+                    width: 18%;
+                }
+            }
+        }
+        .tbody{
+            .body-row {
+                border-collapse:collapse;
+                height: 50px;
+                border-bottom: 1px solid #bebebea8;
+                margin-top: 10px;
+                border-spacing: 0;
+                
+            }
+            .body-row:hover{
+                background-color:#a7a6a680;
+            }
+            td{
+                text-align: center;
+            }
+            .btn-edit{
+                width: 60px;
+                height: 35px;
+                border: none;
+                border-radius: 5px;
+                background-color: #f5c62d;
+            }
+            .btn-delete{
+                width: 70px;
+                height: 35px;
+                border: none;
+                border-radius: 5px;
+                background-color: #ca4938;
+                color: #fefefe;
+
+                &.canDelete {
+                    opacity: 0.6;
+                }
+            }
+            
+            
+        }
+        
+    }
+    .save-task-block {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 90%;
+        height: 70px;
+        background-color: #c0c0c0;
+        text-align: center;
+
+      .save-task {
+        width: 180px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #cac9c9;
+        margin-right: 81px;
+        padding: 5px;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      .save-task:focus {
+        outline: #71b3fa;
+        border: 1px solid #78b1f1;
+        box-shadow: 0 0 0 4px #027cff3f;
+      }
+      .save-btn{
+          width: 60px;
+          height: 35px;
+          margin-right: 63px;
+          border: none;
+          border-radius: 5px;
+          color: #fefefe;
+          background-color: #039928;
+      }
+    }
+}

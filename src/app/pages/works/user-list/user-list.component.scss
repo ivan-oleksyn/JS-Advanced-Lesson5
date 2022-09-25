@@ -1,0 +1,167 @@
+.title {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    color: #000000c7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    border-bottom: 4px solid #e2e2e2;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 20px;
+      
+      .block-wrapper{
+          display: flex;
+          .left-block {
+            width: 39%;
+            box-sizing: border-box;
+  
+            .form {
+              position: relative;
+  
+              .login-wrapper,
+              .password-wrapper,
+              .email-wrapper,
+              .btn {
+                margin-top: 20px;
+                box-sizing: border-box;
+              }
+  
+              .input {
+                width: 95%;
+                height: 35px;
+                margin-top: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 2px solid lightgray;
+                font-size: 17px;
+              }
+  
+              .input::placeholder {
+                color: gray;
+              }
+  
+              .input:focus {
+                outline: #71b3fa;
+                border: 1px solid #78b1f1;
+                box-shadow: 0 0 0 4px rgba(2, 124, 255, 0.247);
+              }
+  
+              .btn {
+                width: 100%;
+                height: 45px;
+                color: #fefefe;
+                border-radius: 5px;
+                padding: 10px;
+                border: none;
+                text-align: center;
+                font-size: 18px;
+              }
+  
+              .add-btn-form {
+                background-color: #0ebd0e;
+              }
+  
+              .add-btn-form:hover {
+                cursor: pointer;
+                background-color: #03ac03;
+                box-shadow: 0 0 0 4px #0ebd0ea9;
+              }
+  
+              .edit-btn-form {
+                background-color: #4aa2bd;
+              }
+  
+              .edit-btn-form:hover {
+                cursor: pointer;
+                background-color: #479bb4;
+                box-shadow: 0 0 0 4px #4aa2bdc9;
+              }
+            }
+          }
+  
+          .right-block {
+            width: 59%;
+  
+            table {
+              width: 100%;
+              margin-top: 72px;
+  
+              .thead {
+                height: 50px;
+                border-top: 1px solid #80808080;
+                border-bottom: 2px solid #8080805e;
+              }
+  
+              td {
+                text-align: center;
+              }
+            }
+          }
+  
+          .index {
+            width: 7%;
+  
+          }
+  
+          .user-login,
+          .user-password {
+            width: 20%;
+          }
+  
+          .user-email {
+            width: 35%;
+          }
+  
+          .user-edit,
+          .user-delete {
+            width: 15%;
+          }
+  
+          .btn-edit {
+            width: 70px;
+            height: 40px;
+            background: #f3b817;
+            border-radius: 5px;
+            color: black;
+            border: none;
+            text-align: center;
+          }
+  
+          .btn-delete {
+            width: 70px;
+            height: 40px;
+            background: #ff0000;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            text-align: center;
+          }
+  
+          .btn-edit:hover {
+            cursor: pointer;
+            background: #c49002;
+          }
+  
+          .btn-delete:hover {
+            cursor: pointer;
+            background: #b30606;
+          }
+  
+          .border {
+            border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+          }
+  
+      }
+    
+  }

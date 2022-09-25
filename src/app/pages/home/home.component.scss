@@ -1,0 +1,29 @@
+.container{
+    margin-top: 100px;
+}
+.title{
+    color:#ca0202;
+    font-size: 17px;
+}
+.btn{
+    width: 100%;
+    height: 50px;
+    color: #fefefe;
+    background-color: #2ac203;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #187501;
+    color: #fefefe;
+}
+.card{
+    border: 2px solid #cfcfcf;
+}
+.img{
+    height: 150px;
+}
+.body{
+    border-top: 2px solid #cfcfcf;
+    background-color: #e9e7e7;
+}
